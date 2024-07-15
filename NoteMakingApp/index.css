@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.header{
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.heading{
+    animation: slideRight 4s ease forwards;
+    
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+    display: block;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb{
+        background-color: #808080;
+        border-radius: 50px;
+}
+
+
+
+.note textarea::-webkit-scrollbar{
+    width: 10px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+}
+
+.note textarea::-webkit-scrollbar-thumb{
+    background-color: #b3b5ae;
+    border-radius: 50px;
+}
+
+
+
+
+#main{
+    padding-top: 40px;
+    width: 100%;
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right,rgb(255, 224, 194),#8df08d); */
+    background-color: #c5c5c5;
+    display: flex;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+}
+
+
+.note{
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    margin: 15px;
+    margin-top: 60px;
+    animation: fromTop 1s ease-in;
+
+}
+
+
+.note.to-bottom {
+    animation: toBottom 0.5s ease-out;
+}
+
+
+
+
+
+.tool{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    
+ 
+}
+
+.tool i{
+    cursor: pointer;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+
+.tool i:hover{
+    font-size: 25px;
+}
+
+
+
+.note textarea{
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+
+.note textarea:focus{
+    border: 0;
+    outline: 0;
+}
+
+
+
+#heading{
+    background-color: black;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+}
+
+#heading:focus{
+    border:0;
+    outline: 0;
+}
+#addBtn{
+    position: fixed;
+    right: 10px;
+    top:19px;
+    background-color: black;
+    color: aliceblue;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+#addBtn i{
+   transition: transform 1s ease;
+     
+ }
+ 
+
+#addBtn:hover i{
+    transform: rotate(360deg);
+}
+
+
+#addBtn i{
+   transform: rotate(0deg);
+    
+}
+
+
+@keyframes mymove {
+    100% {}
+  }
+
+
+
+@keyframes  slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes fromTop {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toBottom {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
